@@ -16,6 +16,7 @@ class Plotter:
                 self.data = self.data[-30:]  # Mantém os últimos 100 pontos
                 plt.cla()
                 plt.plot(self.data, label="Sensor Data")
+                plt.ylim(0, 50)
                 plt.legend()
                 plt.title("Real-Time Data Plot")
                 plt.xlabel("Time")
