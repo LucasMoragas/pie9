@@ -12,10 +12,11 @@ class Plotter:
             if line is None:
                 break  # Sai do loop quando não há mais dados no buffer
             try:
-                value = int(line)
+                value = float(line)
                 self.data.append(value)
                 self.data = self.data[-30:]  # Mantém os últimos 30 pontos
             except ValueError:
+                print('Não foi possível ler o valor')
                 pass
 
         # Atualiza o gráfico

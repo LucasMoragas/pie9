@@ -8,6 +8,4 @@ void loop() {
   float temperature = mockTemperature / 10.0; 
 
   Serial.println(temperature);      
-
-  delay(100); 
 }
