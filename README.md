@@ -10,12 +10,25 @@ Este projeto utiliza um Arduino Uno com o módulo nRF24L01 para enviar dados via
 
 ## Configuração
 1. **Arduino**:
+
    - Conecte o nRF24L01 conforme as instruções na pasta `arduino/`.
    - Carregue os códigos `transmissor.ino` e `receptor.ino` em dois Arduinos.
 
 2. **Python**:
-   - Instale as dependências: `pip install -r python/requirements.txt`.
-   - Execute o script: `python python/main.py`.
+
+   a. Crie e ative um ambiente virtual:
+
+    ```bash
+    python -m venv .venv
+    # Ative no Windows:
+    .\.venv\Scripts\activate
+    # Ative no Linux/Mac:
+    source .venv/bin/activate
+    ```
+
+   b. Instale as dependências: `pip install -r python/requirements.txt`.
+
+   c. Execute o script: `python python/main.py`.
 
 ## Funcionamento
 - O transmissor envia dados do sensor para o receptor via nRF24L01.
